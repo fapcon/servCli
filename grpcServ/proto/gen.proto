@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "/pb";
+
+service MoneyService {
+  rpc GetMoneyValues(MoneyRequest) returns (MoneyResponse) {}
+}
+
+message MoneyRequest {
+  string input = 1;
+}
+
+message MoneyResponse {
+  int64 output = 1;
+}
